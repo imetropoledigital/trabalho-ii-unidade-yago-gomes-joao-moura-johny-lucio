@@ -1,8 +1,8 @@
-const express = require('express');
-const { MongoClient, ObjectId } = require('mongodb');
+import express, { json } from 'express';
+import { MongoClient, ObjectId } from 'mongodb';
 
 const app = express();
-app.use(express.json());
+app.use(json());
 
 const uri = 'mongodb://localhost:27017'; // Adjust the URI as needed
 const client = new MongoClient(uri);
